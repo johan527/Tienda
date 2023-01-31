@@ -42,5 +42,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     left: 0;
     background-color: antiquewhite;
     color: black;
+    overflow: scroll;
     
+}
+.centrado{
+    color: aqua;
+    text-align: center;
+}
+
+tbody tr:nth-child(odd){
+background-color: red;
+color: yellow;
+}
+tbody tr:nth-child(even){
+    background-color: yellow;
+    color: red;
 }

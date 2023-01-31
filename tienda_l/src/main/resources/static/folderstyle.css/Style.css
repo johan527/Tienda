@@ -36,3 +36,11 @@ article header{
     background-color: blue;
     color: white;
 }
+tbody tr:nth-child(odd){
+    background-color: red;
+    color: yellow;
+    }
+    tbody tr:nth-child(even){
+        background-color: yellow;
+        color: red;
+    }
