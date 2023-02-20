@@ -21,7 +21,7 @@ public class ClienteController {
         Cliente cliente2 = new Cliente("Aaron","Ruiz","aarongeruizme@gmail.com","84297869");
         Cliente cliente3 = new Cliente("Rebeca","Arguedas","RebecaArg@gmail.com","85454232");
         
-        model.addAttribute("clientes", clientes);
+        
         return "index";
     }
     
