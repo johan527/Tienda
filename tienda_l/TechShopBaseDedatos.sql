@@ -151,3 +151,14 @@ INSERT INTO techshop.venta (id_venta,id_factura,id_articulo,precio,cantidad) val
 (16,3,15,330000,1),
 (17,3,12,45000,1),
 (18,3,10,15000,3);
+
+create table techshop.usuario (
+  id_usuario INT NOT NULL AUTO_INCREMENT,
+  usuario VARCHAR(30) NOT NULL,  
+  contrasena VARCHAR(30) not null,
+  PRIMARY KEY (id_usuario));
+
+use techshop;
+select * from techshop.usuario;
+insert into techshop.usuario(nombreUsuario,contrasena)values('johan527','12345678');
+
