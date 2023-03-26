@@ -160,5 +160,12 @@ create table techshop.usuario (
 
 use techshop;
 select * from techshop.usuario;
-insert into techshop.usuario(nombreUsuario,contrasena)values('johan527','12345678');
+insert into techshop.usuario(usuario,contrasena)values('johan527','12345678');
 
+create table techshop.empleado (
+  id_empleado INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(30) NOT NULL,  
+  contrasena VARCHAR(30) not null,
+  rol VARCHAR(30) not null,
+  PRIMARY KEY (id_empleado));
+  
