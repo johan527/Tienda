@@ -25,12 +25,12 @@ public class SecurityConfig{
              UserDetails sales=User.builder()
             .username("rebeca")
             .password("{noop}456")
-            .roles("VENDEDOR","ADMIN")
+            .roles("VENDEDOR","USER")
             .build();
               UserDetails user=User.builder()
             .username("pedro")
             .password("{noop}789")
-            .roles("ADMIN")
+            .roles("USER")
             .build();
              return new InMemoryUserDetailsManager(user,sales,admin);
     }   
