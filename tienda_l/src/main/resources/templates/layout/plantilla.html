@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf/extras/springsecurity6">
     <head th:fragment="head">
         <title>TechShop</title>
         <meta charset="UTF-8">
@@ -19,8 +21,8 @@
                     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav">
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <ul class="navbar-nav" sec:authorize="hasRole('ROLE_ADMIN') OR hasRole('ROLE_VENDEDOR')">
                             <li class="nav-item px-2">
                                 <a class="nav-menu-link nav-link" th:href="@{/cliente/listado}">[[#{plantilla.clientes}]]</a>
                             </li>
@@ -32,6 +34,9 @@
                             </li>
                             <li class="nav-item px-2">
                                 <a class="nav-menu-link nav-link" th:href="@{/empleado/listado}">Empleados</a>
+                            </li>
+                            <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')">
+                                <a class="nav-menu-link nav-link" th:href="@{/usuario/listado}">Empleados</a>
                             </li>
                         </ul>                        
                     </div>                    
