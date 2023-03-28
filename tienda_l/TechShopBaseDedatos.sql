@@ -152,15 +152,8 @@ INSERT INTO techshop.venta (id_venta,id_factura,id_articulo,precio,cantidad) val
 (17,3,12,45000,1),
 (18,3,10,15000,3);
 
-create table techshop.usuario (
-  id_usuario INT NOT NULL AUTO_INCREMENT,
-  usuario VARCHAR(30) NOT NULL,  
-  contrasena VARCHAR(30) not null,
-  PRIMARY KEY (id_usuario));
 
 use techshop;
-select * from techshop.usuario;
-insert into techshop.usuario(usuario,contrasena)values('johan527','12345678');
 
 create table techshop.empleado (
   id_empleado INT NOT NULL AUTO_INCREMENT,
@@ -169,3 +162,30 @@ create table techshop.empleado (
   rol VARCHAR(30) not null,
   PRIMARY KEY (id_empleado));
   
+  create table techshop.usuario(  
+     id_usuario INT NOT NULL AUTO_INCREMENT,  
+     username varchar(40) not null,  
+     password varchar(250) not null,  
+     correo varchar(50) not null,  
+     PRIMARY KEY (id_usuario)  
+)
+create table techshop.rol (  
+      id_rol INT NOT NULL AUTO_INCREMENT,  
+      nombre varchar(25), 
+      id_usuario int not null,  
+      PRIMARY KEY (id_rol),  
+      foreign key fk_rol_usuario (id_usuario) references usuario(id_usuario)  
+)
+
+insert into techshop.usuario values 
+(1,'juan','123','juan@gmail.com'),
+(2,'rebeca','123','rebeca@gmail.com'),
+(3,'pedro','123','pedro@gmail.com');
+insert into techshop.rol values 
+(1,'ROLE_ADMIN',1),
+(2,'ROLE_VENDEDOR',1),
+(3,'ROLE_USER',1),
+(4,'ROLE_VENDEDOR',2),
+(5,'ROLE_USER',2),
+(6,'ROLE_USER',3);
+select * from usuario;
