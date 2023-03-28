@@ -38,8 +38,14 @@
                             <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')">
                                 <a class="nav-menu-link nav-link" th:href="@{/usuario/listado}">Empleados</a>
                             </li>
-                        </ul>                        
-                    </div>                    
+                        </ul> 
+                        <ul class="navbar-nav" sec:authorize="!isAuthenticated()">
+                            <li class="nav-item px-2">
+                                <a class="nav-menu-link nav-link" th:href="@{login}"><i class="fas fa-sign-in-alt"></i></a>
+                            </li>
+                        </ul>    
+                    </div> 
+                    
                 </div>
             </nav>
             <section id="main-header" class="py-2 bg-success text-white">
