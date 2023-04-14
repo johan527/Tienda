@@ -1,13 +1,17 @@
-/* Así se hace un comentario */
+
+/* 
+    Created on : Jan 23, 2023, 7:04:43 PM
+    Author     : andrescedeno
+*/
 
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
     padding: 80px 20px 0;
-    font-family: sans-serif;
+    font-family: san-serif;
 }
 
 #header {
@@ -16,10 +20,9 @@ body {
     left: 0;
     width: 100%;
     height: 80px;
-    background-color: #076af0;
+    background-color: blue;
     color: black;
 }
-
 .nav {
     display: flex;
 }
@@ -29,6 +32,7 @@ body {
     text-decoration: none;
 }
 
+
 .nav-menu {
     display: flex;
     margin-right: 40px;
@@ -36,27 +40,27 @@ body {
     list-style: none;
 }
 
-.nav-menu-item {
+.nav-menu item {
     font-size: 18px;
-    margin: 0 10px;    
+    margin: 0 10px;
 }
 
 .nav-menu-link {
     padding: 8px 12px;
     border-radius: 8px;
+    
 }
 
 .nav-menu-link:hover {
     font-size: 22px;
     background-color: #024070;
-    transition: 0.5s;
+    transition: 0.5s
 }
-
 .logo {
-  font-size: 30px;
-  font-weight: bold;
-  padding: 0 40px;
-  line-height: 80px;
+    font-size: 30px;
+    font-width: bold;
+    padding: 0 40px;
+    line-height: 80px;
 }
 
 #aside {
@@ -81,7 +85,7 @@ body {
 }
 
 #footer {
-    position: fixed;    
+    position: fixed;
     left: 0;
     width: 100%;
     height: 30px;
@@ -95,16 +99,17 @@ body {
     text-align: center
 }
 
+
 .derecha {
     text-align: right
 }
-
-tbody tr:nth-child(odd) {
+/* odd es impar, even es par*/
+tbody tr:nth-child(odd){
     background-color: red;
-    color: yellow
+    color: yellow;
 }
 
-tbody tr:nth-child(even) {
+tr:nth-child(even){
     background-color: yellow;
-    color: red
+    color: rede;
 }

@@ -1,13 +1,15 @@
-/* Así se hace un comentario */
+
+/* 
+    Created on : Jan 23, 2023, 7:04:43 PM
+    Author     : andrescedeno
+*/
 
 * {
     background-color: whitesmoke;
 }
-
 h1,h2,h3 {
-    color: blue;
+    color:blue;
 }
-
 p {
     font-family: sans-serif;
     color: brown;
@@ -23,7 +25,7 @@ p {
     color: blue;
 }
 
-article header {
+article header { 
     background-color: bisque;
     color: black;
 }
@@ -34,3 +36,4 @@ article header {
     background-color: blue;
     color: white;
 }
+

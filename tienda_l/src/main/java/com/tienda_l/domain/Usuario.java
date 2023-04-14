@@ -8,33 +8,26 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="usuario")
+@Table(name = "usuario")
+
 public class Usuario implements Serializable {
-   
+
     private static final long serialVersionUID = 1L;
-   
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id_usuario")
+    @Column(name = "id_usuario")
     private Long idUsuario;
+
+    @NotEmpty
+    private String username;
     
     @NotEmpty
+    private String password;
     
-   private String username;
-    
-   @NotEmpty
-   
-   private String password;
-   
-   @JoinColumn(name="id_usuario",referencedColumnName = "id_usuario")
-   @OneToMany
-   private List<Rol> roles;
-   
- 
 
-    public Usuario() {
-    }
+    @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
+    @OneToMany
+    private List<Rol> roles;
 
-    
-   
 }
